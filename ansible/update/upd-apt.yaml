@@ -8,6 +8,9 @@
       when: ansible_pkg_mgr == 'apt'
       ansible.builtin.apt:
         update_cache: yes
+      community.general.discord:
+        webhook_id: "1212479282270437436"
+        webhook_token: "XXXYYY"
 
     - name: Update packages with yum
       when: ansible_pkg_mgr == 'yum'
